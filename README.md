@@ -7,7 +7,7 @@ Es uno de los tres sistemas de mi ERP:
 | Sistema | Qué cubre |
 |---|---|
 | [PCLAP SUPPORT](https://www.pclap-support.com) | Ventas, compras, inventario y tienda web. En producción. |
-| PCLAP Finanzas | Facturación electrónica con SUNAT (entorno de pruebas). |
+| [PCLAP Finanzas](https://github.com/NovoaaMaster/pclap-finanzas) | Facturación electrónica con SUNAT (entorno de pruebas). |
 | **PCLAP CRM** | Este repositorio: clientes, seguimiento y embudo de ventas. |
 
 ![Embudo de ventas con tarjetas repartidas en cinco etapas](docs/capturas/embudo.webp)
