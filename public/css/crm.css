@@ -1,0 +1,563 @@
+/*
+ * Identidad visual del CRM. Se carga después de styles.css (SB Admin).
+ * Distinta de PCLAP (todo negro, azul) y de Finanzas (barra superior petróleo, lateral blanca):
+ * aquí la barra superior es blanca y la lateral ciruela, con acentos violeta y Manrope.
+ */
+
+:root {
+    --crm-ciruela: #3b1a4a;
+    --crm-ciruela-claro: #4c2560;
+    --crm-violeta: #6d28d9;
+    --crm-violeta-hover: #5b21b6;
+    --crm-lila: #c4b5fd;
+    --crm-lila-suave: #ede9fe;
+    --crm-texto: #241b2f;
+    --crm-gris: #6b6475;
+    --crm-fondo: #f7f5f9;
+    --crm-borde: #e7e1ee;
+
+    --bs-body-font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --bs-body-color: var(--crm-texto);
+    --bs-body-bg: var(--crm-fondo);
+    --bs-primary: #6d28d9;
+    --bs-primary-rgb: 109, 40, 217;
+    --bs-link-color: #6d28d9;
+    --bs-link-hover-color: #5b21b6;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    color: var(--crm-texto);
+    background-color: var(--crm-fondo);
+}
+
+table,
+.cifra {
+    font-variant-numeric: tabular-nums;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: var(--crm-violeta);
+}
+
+a:hover {
+    color: var(--crm-violeta-hover);
+}
+
+:focus-visible {
+    outline: 2px solid var(--crm-violeta);
+    outline-offset: 2px;
+}
+
+/* ===== Barra superior blanca ===== */
+.sb-topnav.barra-crm {
+    background-color: #fff;
+    border-bottom: 1px solid var(--crm-borde);
+}
+
+.barra-crm .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--crm-ciruela);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.barra-crm .btn-link,
+.barra-crm .nav-link {
+    color: var(--crm-gris);
+}
+
+.barra-crm .btn-link:hover,
+.barra-crm .nav-link:hover {
+    color: var(--crm-ciruela);
+}
+
+.logo-crm {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+.buscador-global {
+    width: min(26rem, 40vw);
+}
+
+.buscador-global .form-control {
+    border-color: var(--crm-borde);
+    background-color: var(--crm-fondo);
+}
+
+/* ===== Barra lateral ciruela ===== */
+#layoutSidenav #layoutSidenav_nav .sb-sidenav-dark {
+    background-color: var(--crm-ciruela);
+}
+
+.sb-sidenav.sb-sidenav-dark .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+    padding: 1.5rem 1rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+    margin: 0.1rem 0.6rem;
+    padding: 0.6rem 0.65rem;
+    border-radius: 0.6rem;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+    color: #fff;
+    background-color: var(--crm-ciruela-claro);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+    color: #fff;
+    background-color: rgba(196, 181, 253, 0.16);
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 var(--crm-lila);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+    color: var(--crm-lila);
+}
+
+.contador-menu {
+    margin-left: auto;
+    border-radius: 999px;
+    padding: 0.15rem 0.5rem;
+    background-color: #f43f5e;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+    background-color: rgba(0, 0, 0, 0.18);
+    color: #fff;
+}
+
+/* ===== Botones y formularios ===== */
+.btn-primary {
+    --bs-btn-bg: #6d28d9;
+    --bs-btn-border-color: #6d28d9;
+    --bs-btn-hover-bg: #5b21b6;
+    --bs-btn-hover-border-color: #5b21b6;
+    --bs-btn-focus-shadow-rgb: 109, 40, 217;
+    --bs-btn-active-bg: #4c1d95;
+    --bs-btn-active-border-color: #4c1d95;
+    --bs-btn-disabled-bg: #6d28d9;
+    --bs-btn-disabled-border-color: #6d28d9;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #6d28d9;
+    --bs-btn-border-color: #c4b5fd;
+    --bs-btn-hover-bg: #6d28d9;
+    --bs-btn-hover-border-color: #6d28d9;
+    --bs-btn-focus-shadow-rgb: 109, 40, 217;
+    --bs-btn-active-bg: #5b21b6;
+    --bs-btn-active-border-color: #5b21b6;
+}
+
+.btn-link {
+    --bs-btn-color: #6d28d9;
+    --bs-btn-hover-color: #5b21b6;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 0.25rem rgba(109, 40, 217, 0.18);
+}
+
+.nav-tabs .nav-link {
+    color: var(--crm-gris);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--crm-violeta);
+    font-weight: 700;
+}
+
+.page-link {
+    color: var(--crm-violeta);
+}
+
+.active > .page-link,
+.page-link.active {
+    background-color: var(--crm-violeta);
+    border-color: var(--crm-violeta);
+}
+
+.card {
+    border-color: var(--crm-borde);
+    border-radius: 0.85rem;
+}
+
+.card-header {
+    background-color: #fff;
+    font-weight: 700;
+    border-top-left-radius: 0.85rem !important;
+    border-top-right-radius: 0.85rem !important;
+}
+
+.breadcrumb-item a {
+    color: var(--crm-violeta);
+}
+
+footer.bg-light {
+    background-color: #fff !important;
+    border-top: 1px solid var(--crm-borde);
+}
+
+/* ===== Avatares de iniciales ===== */
+.avatar {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.avatar-sm {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.68rem;
+}
+
+.avatar-lg {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.35rem;
+}
+
+/* ===== Etiquetas de segmento ===== */
+.segmento {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.segmento-nuevo { background-color: #dcfce7; color: #166534; }
+.segmento-frecuente { background-color: #ede9fe; color: #5b21b6; }
+.segmento-inactivo { background-color: #fee2e2; color: #991b1b; }
+.segmento-ocasional { background-color: #e0f2fe; color: #075985; }
+.segmento-sin-compras { background-color: #f1f5f9; color: #475569; }
+.segmento-prospecto { background-color: #fef3c7; color: #92400e; }
+
+.etiqueta-demo {
+    border: 1px dashed #c4b5fd;
+    border-radius: 0.4rem;
+    padding: 0 0.35rem;
+    color: var(--crm-gris);
+    font-size: 0.68rem;
+    font-weight: 600;
+}
+
+/* ===== Indicadores del panel ===== */
+.kpi {
+    height: 100%;
+    padding: 1.1rem 1.15rem;
+    border: 1px solid var(--crm-borde);
+    border-radius: 0.85rem;
+    background-color: #fff;
+}
+
+.kpi-icono {
+    display: inline-grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.7rem;
+    background-color: var(--kpi-fondo, var(--crm-lila-suave));
+    color: var(--kpi-color, var(--crm-violeta));
+}
+
+.kpi-valor {
+    margin-top: 0.75rem;
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+}
+
+.kpi-etiqueta {
+    color: var(--crm-gris);
+    font-size: 0.875rem;
+}
+
+/* Barras del resumen del embudo en el panel */
+.barra-etapa {
+    height: 0.5rem;
+    border-radius: 999px;
+    background-color: var(--crm-lila-suave);
+    overflow: hidden;
+}
+
+.barra-etapa > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--etapa-color, var(--crm-violeta));
+}
+
+/* ===== Login ciruela con los anillos del logo ===== */
+.login-crm {
+    min-height: 100vh;
+    background-color: var(--crm-ciruela);
+    background-image:
+        radial-gradient(circle at 82% 18%, transparent 0 9rem, rgba(196, 181, 253, 0.16) 9rem 9.15rem, transparent 9.2rem),
+        radial-gradient(circle at 90% 30%, transparent 0 13rem, rgba(196, 181, 253, 0.1) 13rem 13.15rem, transparent 13.2rem),
+        radial-gradient(circle at 10% 90%, rgba(109, 40, 217, 0.35), transparent 22rem);
+}
+
+.login-crm .login-tarjeta {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 3rem rgba(20, 6, 28, 0.4);
+}
+
+.login-marca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+}
+
+.login-marca .logo-crm {
+    width: 3rem;
+    height: 3rem;
+}
+
+.login-marca-nombre {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.login-marca-detalle {
+    margin: 0.3rem 0 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #layoutSidenav #layoutSidenav_nav {
+        transition: none;
+    }
+}
+
+/* ===== Línea de tiempo de la ficha ===== */
+.linea-tiempo-item {
+    position: relative;
+    display: flex;
+    gap: 0.85rem;
+    padding-bottom: 1.1rem;
+}
+
+.linea-tiempo-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 2.1rem;
+    bottom: 0.2rem;
+    left: 1rem;
+    width: 2px;
+    background-color: var(--crm-borde);
+}
+
+.linea-tiempo-icono {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--evento-color) 14%, white);
+    color: var(--evento-color);
+    font-size: 0.85rem;
+}
+
+/* ===== Embudo tipo Trello: el momento llamativo del CRM ===== */
+.tablero {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(205px, 1fr); /* las 5 columnas entran desde ~1366 px; en pantallas menores, desplazamiento horizontal */
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    min-height: 62vh;
+    padding: 0.9rem;
+    border-radius: 1rem;
+    background-color: #efe9f5;
+}
+
+.columna-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.columna-punto {
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background-color: var(--etapa-color);
+}
+
+.columna-cantidad {
+    min-width: 1.6rem;
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+    background-color: #fff;
+    color: var(--crm-texto);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.columna-total {
+    margin: 0.4rem 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.columna .barra-etapa {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.columna .barra-etapa > span {
+    background-color: var(--etapa-color);
+    transition: width 0.35s ease;
+}
+
+.columna-cuerpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.65rem;
+    min-height: 6rem;
+    margin-top: 0.9rem;
+}
+
+/* Con :has() y no :empty: al vaciar una columna arrastrando quedan espacios en blanco en el HTML */
+.columna-cuerpo:not(:has(.tarjeta-op))::before {
+    content: attr(data-vacio);
+    padding: 1.25rem 0.75rem;
+    border: 2px dashed #d6c9e6;
+    border-radius: 0.75rem;
+    color: var(--crm-gris);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.tarjeta-op {
+    padding: 0.8rem 0.85rem;
+    border: 1px solid var(--crm-borde);
+    border-left: 4px solid var(--etapa-color);
+    border-radius: 0.8rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(36, 27, 47, 0.06);
+    cursor: grab;
+    transition: box-shadow 0.15s ease, border-color 0.2s ease;
+}
+
+.tarjeta-op:hover {
+    box-shadow: 0 6px 18px rgba(59, 26, 74, 0.12);
+}
+
+.tarjeta-titulo {
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.tarjeta-monto {
+    color: var(--crm-ciruela);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+/* Tarjeta levantada mientras se arrastra, y hueco donde caerá */
+.tarjeta-arrastrada {
+    transform: rotate(2.5deg);
+    box-shadow: 0 16px 32px rgba(59, 26, 74, 0.28) !important;
+    cursor: grabbing;
+    opacity: 1 !important;
+}
+
+.tarjeta-fantasma {
+    border-style: dashed;
+    opacity: 0.35;
+}
+
+.min-w-0 {
+    min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-op,
+    .columna .barra-etapa > span {
+        transition: none;
+    }
+
+    .tarjeta-arrastrada {
+        transform: none;
+    }
+}
+
+/* Tarjetas en columnas angostas (5 columnas en 1366 px): el monto y los días no se parten */
+.columna {
+    padding: 0.8rem 0.75rem;
+}
+
+.tarjeta-op {
+    padding: 0.75rem 0.7rem;
+}
+
+.tarjeta-titulo {
+    overflow-wrap: break-word; /* solo corta una palabra si no cabe en una línea completa */
+    hyphens: auto;
+}
+
+.tarjeta-pie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.15rem 0.5rem;
+}
+
+.tarjeta-pie > * {
+    white-space: nowrap;
+}
